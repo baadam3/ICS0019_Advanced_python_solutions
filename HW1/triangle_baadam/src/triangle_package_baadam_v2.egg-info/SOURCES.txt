@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/triangle_package_baadam_v2.egg-info/PKG-INFO
+src/triangle_package_baadam_v2.egg-info/SOURCES.txt
+src/triangle_package_baadam_v2.egg-info/dependency_links.txt
+src/triangle_package_baadam_v2.egg-info/top_level.txt
+src/triangle_package_v2/__init__.py
+src/triangle_package_v2/triangle.py

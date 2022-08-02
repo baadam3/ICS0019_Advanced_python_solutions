@@ -1,0 +1,68 @@
+C:\Users\einark\Desktop\Python21\Loeng3\WebCrawling>scrapy runspider scraper0.py
+2021-02-24 20:13:05 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: scrapybot)
+2021-02-24 20:13:05 [scrapy.utils.log] INFO: Versions: lxml 4.6.1.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1h  22 Sep 2020), cryptography 3.1.1, Platform Windows-10-10.0.19041-SP0
+2021-02-24 20:13:05 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2021-02-24 20:13:05 [scrapy.crawler] INFO: Overridden settings:
+{'SPIDER_LOADER_WARN_ONLY': True}
+2021-02-24 20:13:05 [scrapy.extensions.telnet] INFO: Telnet Password: 528f389e5fe7e81e
+2021-02-24 20:13:05 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-02-24 20:13:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-02-24 20:13:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-02-24 20:13:08 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2021-02-24 20:13:08 [scrapy.core.engine] INFO: Spider opened
+2021-02-24 20:13:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-02-24 20:13:08 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-02-24 20:13:08 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://brickset.com/sets/year-2021> from <GET http://brickset.com/sets/year-2021>
+2021-02-24 20:13:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://brickset.com/sets/year-2021> (referer: None)
+2021-02-24 20:13:09 [scrapy.core.scraper] ERROR: Spider error processing <GET https://brickset.com/sets/year-2021> (referer: None)
+Traceback (most recent call last):
+  File "c:\programdata\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\programdata\anaconda3\lib\site-packages\scrapy\spiders\__init__.py", line 90, in _parse
+    return self.parse(response, **kwargs)
+  File "c:\programdata\anaconda3\lib\site-packages\scrapy\spiders\__init__.py", line 93, in parse
+    raise NotImplementedError(f'{self.__class__.__name__}.parse callback is not defined')
+NotImplementedError: BrickSetSpider.parse callback is not defined
+2021-02-24 20:13:09 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-02-24 20:13:09 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 548,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 12524,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/301': 1,
+ 'elapsed_time_seconds': 0.925133,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 2, 24, 18, 13, 9, 580821),
+ 'log_count/DEBUG': 2,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'spider_exceptions/NotImplementedError': 1,
+ 'start_time': datetime.datetime(2021, 2, 24, 18, 13, 8, 655688)}
+2021-02-24 20:13:09 [scrapy.core.engine] INFO: Spider closed (finished)
